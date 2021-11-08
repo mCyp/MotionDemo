@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        android:id="@+id/forward"
+        motion:constraintSetEnd="@+id/next"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:touchAnchorSide="left" />
+
+    </Transition>
+
+    <Transition
+        android:id="@+id/backward"
+        motion:constraintSetEnd="@+id/previous"
+        motion:constraintSetStart="@+id/start">
+        <OnSwipe
+            motion:dragDirection="dragDown"
+            motion:touchAnchorSide="right" />
+    </Transition>
+
+    <!-- previous对应的组件状态 -->
+    <ConstraintSet android:id="@+id/previous">
+
+        <Constraint
+            android:id="@+id/iv1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:translationY="-110dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:translationY="-90dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:translationY="-70dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:translationY="-50dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:translationY="-30dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="1.0"
+            android:scaleY="1.0"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/iv0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:translationY="-110dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:translationY="-90dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:translationY="-70dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:translationY="-50dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:translationY="-30dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="1.0"
+            android:scaleY="1.0"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toTopOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/next">
+
+        <Constraint
+            android:id="@+id/iv0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:translationY="-90dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:translationY="-70dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:translationY="-50dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:translationY="-30dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleX="1.0"
+            android:scaleY="1.0"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/iv5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintBottom_toTopOf="parent"
+            motion:layout_constraintDimensionRatio="5:3"
+            motion:layout_constraintLeft_toLeftOf="@+id/gl1"
+            motion:layout_constraintRight_toRightOf="@+id/gl2" />
+
+    </ConstraintSet>
+
+
+</MotionScene>

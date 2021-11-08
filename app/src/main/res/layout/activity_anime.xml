@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/anime_motion_scence"
+    tools:context=".AnimeActivity">
+
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/iv0"
+        app:layout_constraintDimensionRatio="192:108"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/iv0"
+        android:layout_width="60dp"
+        android:layout_height="200dp"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/card1"
+        android:scaleType="centerCrop"
+        />
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="60dp"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/card2"
+        android:scaleType="centerCrop"
+        />
+
+    <ImageView
+        android:id="@+id/iv2"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toRightOf="@+id/iv1"
+        app:layout_constraintRight_toLeftOf="@+id/iv3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/card3"
+        android:scaleType="centerCrop"
+        />
+
+    <ImageView
+        android:id="@+id/iv3"
+        android:layout_width="60dp"
+        android:layout_height="200dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/card4"
+        android:scaleType="centerCrop"
+        />
+
+    <ImageView
+        android:id="@+id/iv4"
+        android:layout_width="60dp"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/card5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scaleType="centerCrop"
+        />
+
+    <androidx.constraintlayout.helper.widget.Carousel
+        android:id="@+id/carousel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:carousel_forwardTransition="@+id/forward"
+        app:carousel_backwardTransition="@+id/backward"
+        app:carousel_previousState="@+id/previous"
+        app:carousel_nextState="@+id/next"
+        app:carousel_infinite="true"
+        app:carousel_firstView="@+id/iv2"
+        app:constraint_referenced_ids="iv0,iv1,iv2,iv3,iv4"
+        />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
